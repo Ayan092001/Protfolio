@@ -2,15 +2,10 @@ import SectionHeader from "./SectionHeader";
 
 export default function Contact({ dark }) {
   const handleEmailClick = () => {
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    if (isAndroid) {
-      window.location.href =
-        "intent://compose?to=ayand9332@gmail.com&subject=Hiring Inquiry#Intent;scheme=googlegmail;package=com.google.android.gm;end";
-    } else if (isIOS) {
-      window.location.href =
-        "googlegmail://co?to=ayand9332@gmail.com&subject=Hiring Inquiry";
+    if (isMobile) {
+      window.location.href = "mailto:ayand9332@gmail.com?subject=Hiring Inquiry";
     } else {
       window.open(
         "https://mail.google.com/mail/?view=cm&to=ayand9332@gmail.com&su=Hiring Inquiry",
