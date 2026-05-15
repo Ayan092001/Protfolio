@@ -38,7 +38,7 @@ export default function Projects({ dark }) {
 
           {projects.map((p) => (
             <div key={p.name} className={`border rounded-xl overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-200 ${card}`}>
-              <div className="h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
+              <div className="h-1 bg-linear-to-r from-blue-600 to-blue-400" />
               <div className="p-5 flex-1">
                 <div className="text-xs font-semibold tracking-widest uppercase text-blue-500 mb-2">{p.tag}</div>
                 <h3 className={`font-serif text-xl mb-2 ${name}`}>{p.name}</h3>
@@ -50,7 +50,7 @@ export default function Projects({ dark }) {
                     <span key={t} className={`text-xs px-2 py-1 rounded-full font-medium ${badge}`}>{t}</span>
                   ))}
                 </div>
-                <a href={p.github} className={`text-xs transition-colors ml-3 flex-shrink-0 ${gh}`} target="_blank" rel="noopener noreferrer">
+                <a href={p.github} className={`text-xs transition-colors ml-3 shrink-0 ${gh}`} target="_blank" rel="noopener noreferrer">
                   GitHub →
                 </a>
               </div>
